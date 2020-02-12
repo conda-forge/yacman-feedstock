@@ -1,5 +1,5 @@
 {% set name = "yacman" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 291d5ce759b4abe8e3d14634cb30ce4971995298e18f7197633371571f5bbf15
+  sha256: a58606084deb4a55eb73d352a1eaab4c34065d226e9ca976c5b12b761830f8ac
 
 build:
   number: 0
