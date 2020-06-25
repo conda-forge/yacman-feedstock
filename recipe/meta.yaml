@@ -1,18 +1,18 @@
 {% set name = "yacman" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.8" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 291d5ce759b4abe8e3d14634cb30ce4971995298e18f7197633371571f5bbf15
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 33df97ce219ab04ae95c4612a6c9c4723756d08b5043994b1c6f171ba92a1844
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,11 +30,11 @@ test:
     - yacman
 
 about:
-  home: "https://github.com/databio/yacman/"
-  license: "BSD-2-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE.txt"
-  summary: "A standardized configuration object for reference genome assemblies"
+  home: https://github.com/databio/yacman/
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: A standardized configuration object for reference genome assemblies
 
 extra:
   recipe-maintainers:
