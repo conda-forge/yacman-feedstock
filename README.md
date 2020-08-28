@@ -5,7 +5,7 @@ Home: https://github.com/databio/yacman/
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A standardized configuration object for reference genome assemblies
 
