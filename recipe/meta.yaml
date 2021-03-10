@@ -35,7 +35,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: A standardized configuration object for reference genome assemblies
+  summary: YAML configuration manager
 
 extra:
   recipe-maintainers:
