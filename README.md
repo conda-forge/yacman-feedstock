@@ -7,7 +7,7 @@ Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yacman-feedstock/blob/master/LICENSE.txt)
 
-Summary: A standardized configuration object for reference genome assemblies
+Summary: A YAML configuration manager
 
 Current build status
 ====================
