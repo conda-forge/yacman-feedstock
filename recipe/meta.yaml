@@ -1,5 +1,5 @@
 {% set name = "yacman" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 97e9b439bae023a937213a99bc95387c05987e8f418b21d879b3908e8bd96fd5
+  sha256: 171e71523f64b2dddbd7a547ad2dd61bca960e9d2ec613d314c5cdc2a119525b
 
 build:
   number: 0
@@ -17,13 +17,14 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - attmap >=0.12.9
     - oyaml
-    - python
+    - python >=3.6
     - pyyaml >=3.13
     - ubiquerg >=0.6.1
+    - jsonschema >=3.2.0
 
 test:
   imports:
@@ -34,7 +35,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: A standardized configuration object for reference genome assemblies
+  summary: YAML configuration manager
 
 extra:
   recipe-maintainers:
