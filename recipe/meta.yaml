@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 91f29ecad7abf32425be034619bd5b00a50fe2be23447b1827c34e1fd68c055d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - attmap >=0.12.9
     - oyaml
-    - python >=3.6
+    - python >={{ python_min }}
     - pyyaml >=3.13
     - ubiquerg >=0.6.1
     - jsonschema >=3.2.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - yacman
 
