@@ -1,13 +1,13 @@
 {% set name = "yacman" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 91f29ecad7abf32425be034619bd5b00a50fe2be23447b1827c34e1fd68c055d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e10babf0faa1e77ce35d8d00e6be1aa762aef5db6666db09015ba013a65e5f45
 
 build:
   number: 0
