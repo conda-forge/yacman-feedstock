@@ -1,5 +1,5 @@
 {% set name = "yacman" %}
-{% set version = "0.9.5" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8a5ab8287a6ad2f26b9726727c256dc5a0eefc297c5427755cc265ed61803faf
+  sha256: 203d8159709c6f2ba7cb2c99c96f0386de3a2d30fc1d26c38226f16d1f8c1b55
 
 build:
   number: 0
@@ -17,15 +17,12 @@ build:
 requirements:
   host:
     - pip
-    - setuptools
+    - hatchling
     - python {{ python_min }}
   run:
-    - attmap >=0.13.0
-    - jsonschema >=3.2.0
-    - oyaml
     - python >={{ python_min }}
-    - pyyaml >=3.13
-    - ubiquerg >=0.7.0
+    - pyyaml >=5.0
+    - ubiquerg >=0.9.1
 
 test:
   imports:
